@@ -197,6 +197,43 @@ body {
   background-color: #f2f2f2;
   font-family: "Open Sans", sans-serif;
 }
+/* Lettering */
+h1.nombre-sitio span {
+  position: relative;
+  text-shadow: 0 0 30px black;
+}
+@media only screen and (min-width: 992px) {
+  .char1{
+    top:20px; right:20px;
+  }
+  .char2{
+    top:0px; left:-20px;
+  }
+  .char3{
+    top:10px; right:20px;
+  }
+  .char4{
+    top:5px; right:10px;
+  }
+  .char5{
+    top: 15px; right:10px;
+  }
+  .char6{
+    top: 5px;left: 10px;
+  }
+  .char7{
+    top:20px; left: -10px;
+  }
+  .char8{
+    top:0px; left:10px;
+  }
+  .char9{
+    top: 10px; right:20px;
+  }
+  .char10{
+    top:20px; right: 20px;
+  }
+}
 
 /*Header*/
 .hero {
@@ -276,6 +313,13 @@ div.barra {
   background-color: #353535;
   padding: 20px 0;
 }
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 2; /* <- si se esconde la barra bajo otros elementos */
+}
 div.logo {
   width: 80%;
   float: left;
@@ -290,6 +334,7 @@ div.logo img {
 }
 nav.navegacion-principal {
   display: none;
+  width: 100%;
 }
 nav.navegacion-principal a {
   font-family: "Oswald", sans-serif;
@@ -385,7 +430,7 @@ div.programa-evento {
 nav.menu-programa {
   width: 100%;
   border-bottom: 1px solid #fe4918;
-  padding-bottom: 10px;
+  
 }
 @media only screen and (min-width: 768px) {
   nav.menu-programa {
@@ -400,6 +445,24 @@ nav.menu-programa a {
   font-family: "Oswald", sans-serif;
   margin-bottom: 10px;
   font-size: 1.2em;
+  position: relative;
+  padding-bottom: 10px;
+}
+nav.menu-programa a.activo:after {
+  content:'';
+  position: absolute;
+  /* centrar con position absolute -> */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* <- */
+  height: 20px;
+  width: 30px;
+  background-image: url('../img/talleres-flecha.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom:-20px;
 }
 @media only screen and (min-width: 768px) {
   nav.menu-programa a {
@@ -413,6 +476,9 @@ div.detalle-evento p i {
   margin-right: 10px;
 }
 /** detalle evento **/
+div.ocultar {
+display:none;
+}
 div.detalle-evento {
   margin-top: 20px;
   border-bottom: 1px solid black;
@@ -713,6 +779,12 @@ p.copyright {
   margin: 20px 0 0 0;
 }
 /** INTERNAS **/
+/* Conferencias */
+div.galeria a{
+  display:inline-block;
+  margin-bottom: 5px;
+
+}
 /* Registro */
 form.registro h3 {
   text-align: center;

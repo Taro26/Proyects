@@ -73,7 +73,7 @@
           <span></span>
         </div>
         <nav class="navegacion-principal clearfix">
-          <a href="#">conferencia</a>
+          <a href="conferencia.html">conferencia</a>
           <a href="#">Calendario</a>
           <a href="#">Invitados</a>
           <a href="registro.html">Reservaciones</a>
@@ -121,50 +121,50 @@
             <div id="talleres" class="info-curso ocultar clearfix">
               <div class="detalle-evento">
                 <h3>HTML5,CSS3 y Javascript</h3>
-                <p><i class="fas fa-clock-o"></i>16:00hrs</p>
-                <p><i class="fas fa-calendar-alt"></i>10 de Dic</p>
-                <p><i class="fas fa-user"></i>Juan Pablo de la Torre</p>
+                <p><i class="fas fa-clock-o" aria-hidden="true"></i>16:00hrs</p>
+                <p><i class="fas fa-calendar-alt" aria-hidden="true"></i>10 de Dic</p>
+                <p><i class="fas fa-user" aria-hidden="true"></i>Juan Pablo de la Torre</p>
               </div>
 
               <div class="detalle-evento">
                 <h3>Responsive Web Design</h3>
-                <p><i class="far fa-clock"></i>20:00hrs</p>
-                <p><i class="fas fa-calendar-alt"></i>10 de Dic</p>
-                <p><i class="fas fa-user"></i>Juan Pablo de la Torre</p>
+                <p><i class="far fa-clock" aria-hidden="true"></i>20:00hrs</p>
+                <p><i class="fas fa-calendar-alt" aria-hidden="true"></i>10 de Dic</p>
+                <p><i class="fas fa-user" aria-hidden="true"></i>Juan Pablo de la Torre</p>
               </div>
               <a href="#" class="button float-right">Ver todos</a>
             </div><!--#talleres-->
 
             <div id="conferencias" class="info-curso ocultar clearfix">
               <div class="detalle-evento">
-                <h3>HTML5,CSS3 y Javascript</h3>
-                <p><i class="fas fa-clock-o"></i>16:00hrs</p>
-                <p><i class="fas fa-calendar-alt"></i>10 de Dic</p>
-                <p><i class="fas fa-user"></i>Juan Pablo de la Torre</p>
+                <h3>Como ser freelancer</h3>
+                <p><i class="fas fa-clock-o" aria-hidden="true"></i>10:00hrs</p>
+                <p><i class="fas fa-calendar-alt" aria-hidden="true"></i>10 de Dic</p>
+                <p><i class="fas fa-user" aria-hidden="true"></i>Gregorio Sanchez</p>
               </div>
 
               <div class="detalle-evento">
-                <h3>Responsive Web Design</h3>
-                <p><i class="far fa-clock"></i>20:00hrs</p>
-                <p><i class="fas fa-calendar-alt"></i>10 de Dic</p>
-                <p><i class="fas fa-user"></i>Juan Pablo de la Torre</p>
+                <h3>Tecnologias del futuro</h3>
+                <p><i class="far fa-clock" aria-hidden="true"></i>17:00hrs</p>
+                <p><i class="fas fa-calendar-alt" aria-hidden="true"></i>10 de Dic</p>
+                <p><i class="fas fa-user" aria-hidden="true"></i>Susan Sanchez</p>
               </div>
               <a href="#" class="button float-right">Ver todos</a>
             </div><!--#conferencias-->
 
             <div id="seminarios" class="info-curso ocultar clearfix">
               <div class="detalle-evento">
-                <h3>HTML5,CSS3 y Javascript</h3>
-                <p><i class="fas fa-clock-o"></i>16:00hrs</p>
-                <p><i class="fas fa-calendar-alt"></i>10 de Dic</p>
-                <p><i class="fas fa-user"></i>Juan Pablo de la Torre</p>
+                <h3>Diseño UI/UX para móviles</h3>
+                <p><i class="fas fa-clock-o" aria-hidden="true"></i>17:00hrs</p>
+                <p><i class="fas fa-calendar-alt" aria-hidden="true"></i>11 de Dic</p>
+                <p><i class="fas fa-user" aria-hidden="true"></i>Harold Garcia</p>
               </div>
 
               <div class="detalle-evento">
-                <h3>Responsive Web Design</h3>
-                <p><i class="far fa-clock"></i>20:00hrs</p>
-                <p><i class="fas fa-calendar-alt"></i>10 de Dic</p>
-                <p><i class="fas fa-user"></i>Juan Pablo de la Torre</p>
+                <h3>Aprende a programar en una mañana</h3>
+                <p><i class="far fa-clock" aria-hidden="true"></i>10:00hrs</p>
+                <p><i class="fas fa-calendar-alt" aria-hidden="true"></i>11 de Dic</p>
+                <p><i class="fas fa-user" aria-hidden="true"></i>Susan Rivera</p>
               </div>
               <a href="#" class="button float-right">Ver todos</a>
             </div><!--#seminarios-->
@@ -224,19 +224,19 @@
       <div class="contenedor">
         <ul class="resumen-evento clearfix">
           <li>
-            <p class="numero">6</p>
+            <p class="numero"></p>
             Invitados
           </li>
           <li>
-            <p class="numero">15</p>
+            <p class="numero"></p>
             talleres
           </li>
           <li>
-            <p class="numero">3</p>
+            <p class="numero"></p>
             Dias
           </li>
           <li>
-            <p class="numero">9</p>
+            <p class="numero"></p>
             Conferencias
           </li>
         </ul>
@@ -362,19 +362,19 @@
       <div class="cuenta-regresiva contenedor">
         <ul class="clearfix">
           <li>
-            <p class="numero">80</p>
+            <p id='dias' class="numero"></p>
             días
           </li>
           <li>
-            <p class="numero">15</p>
+            <p id='horas' class="numero"></p>
             horas
           </li>
           <li>
-            <p class="numero">5</p>
+            <p id='minutos' class="numero"></p>
             minutos
           </li>
           <li>
-            <p class="numero">30</p>
+            <p id='segundos' class="numero"></p>
             segundos
           </li>
         </ul>
@@ -438,9 +438,12 @@
         );
     </script>
     <script src="js/plugins.js"></script>
+    <script src="js/vendor/jquery.animateNumber.js"></script>
+    <script src="js/vendor/jquery.lettering.js"></script>
+    <script src="js/vendor/jquery.countdown.js"></script>
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
-
+    jquery.lettering
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
       window.ga = function() {
